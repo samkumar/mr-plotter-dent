@@ -1,0 +1,9 @@
+[submodule "qtlibbw"]
+	path = qtlibbw
+	url = https://github.com/immesys/qtlibbw
+[submodule "mr-plotter-qml"]
+	path = mr-plotter-qml
+	url = https://github.com/SoftwareDefinedBuildings/mr-plotter-qml
+[submodule "mr-plotter-layouts"]
+	path = mr-plotter-layouts
+	url = https://github.com/SoftwareDefinedBuildings/mr-plotter-layouts
