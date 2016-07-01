@@ -82,64 +82,14 @@ Window {
                      "2766e74e-ecc4-5724-9693-8780a24c12a9",
                      "d719f517-4d1b-5053-b2f9-85f3cc762c85"];
 
-        /*var sparkline = Qt.createComponent("LabeledSparkline.qml");
-        if (sparkline.status !== Component.Ready)
-        {
-            console.log("Could not load summary layout");
-            return;
-        }
-
-        if (sparkline.status !== Component.Ready)
-        {
-            console.log("Error loading component:", summarylayout.errorString());
-            return;
-        }
-
-        for (var i = 0; i < uuids.length; i++)
-        {
-            var labeledplot =
-                    sparkline.createObject(grid,
-                                           {"width": 300,
-                                               "height": 200,
-                                               "uuid": uuids[i],
-                                               "archiver": "gabe.ns/s.giles/0/i.archiver",
-                                               "autozoomOnLoad": true,
-                                               "color": "blue",
-                                               "scrollZoomable": false,
-                                               "label": uuids[i]});
-            if (labeledplot === null)
-            {
-                console.log("Error creating object");
-            }
-        }*/
-
         for (var i = 0; i < uuids.length; i++)
         {
             streams.append({ "suuid": uuids[i] });
         }
-
-
     }
-
-    /*Flickable {
-        anchors.fill: parent
-        contentHeight: grid.height
-        GridLayout {
-            id: grid
-            columns: Math.floor(toplevel.width / (300 + grid.columnSpacing))
-            columnSpacing: 50
-            rowSpacing: 50
-        }
-    }*/
 
     ListModel {
         id: streams
-//        ListElement {
-//            suuid: "e14bc2c9-e277-5239-9e60-8fa839394c01"
-//        }
-//        ListElement {
-//            suuid: "7b79e5c6-43d4-5015-8069-5c2b59948b96"
-//        }
     }
 
     GridView {
@@ -151,7 +101,7 @@ Window {
         model: streams
         delegate: MrPlotterLayouts.Sparkline {
             uuid: suuid
-            archiver: "local" //"gabe.ns/s.giles/0/i.archiver"
+            archiver: "gabe.ns/s.giles/0/i.archiver"
             autozoomOnLoad: true
             color: "blue"
             scrollZoomable: false
